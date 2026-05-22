@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wis</title>
+    <link rel="icon" type="image/png" sizes="256x256" href="static/css/logo.png">
+    <link rel="shortcut icon" type="image/png" href="static/css/logo.png">
+    <link rel="apple-touch-icon" href="static/css/logo.png">
+    <!-- Google Fonts for Retro-Gaming and Cyberpunk Typography -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Pixelify+Sans:wght@400;700&family=Press+Start+2P&family=Rajdhani:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Social and System Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet Link (Django Hook Point) -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- RETRO BOOT AUDIO ENGINE -->
+    <audio id="bg-music" loop src="templates/audio/CUTE DEPRESSED (SLOWED Version).mp3" volume="0.5"></audio>
+
+    <!-- SYSTEM GLITCH LOADING OVERLAY -->
+    <div id="loader" class="loader-container">
+        <div class="loader-terminal">
+            <p class="term-line-fast">> INITIALIZING WISCODE.exe V1.0.0...</p>
+            <p class="term-line-fast">> LOADING KERNEL DRIVERS... OK</p>
+            <p class="term-line-fast">> CONNECTING TO CYBERSPACE NET_MATRIX... CONNECTED</p>
+            <p class="term-line-fast">> INJECTING NEON CHROME ASSETS... 100%</p>
+            <div class="pixel-progress-bar">
+                <div class="pixel-progress-fill"></div>
+            </div>
+            <p class="loader-status-text">BOOTING SYSTEM...</p>
+        </div>
+    </div>
+
+    <!-- CUSTOM HARDWARE CURSOR GRAPHIC -->
+    <div class="custom-cursor-core"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- AMBIENT MATRIX GRID GRAPHIC LAYER -->
+    <div class="matrix-grid-overlay"></div>
+    <div class="pixel-rain-canvas-container">
+        <canvas id="pixel-rain"></canvas>
+    </div>
+
+    <!-- PERSISTENT HEADS-UP DISPLAY / NAVIGATION -->
+    <header class="hud-navbar">
+        <div class="hud-logo glitch" data-text="WISCODE.exe">WISCODE.exe</div>
+        <nav class="hud-menu">
+            <a href="#hero" class="hud-link active"><i class="fa-solid antiquewhite fa-terminal"></i> HOME</a>
+            <a href="#about" class="hud-link"><i class="fa-solid fa-user-shield"></i> PROFILE</a>
+            <a href="#skills" class="hud-link"><i class="fa-solid fa-microchip"></i> SKILLS</a>
+            <a href="#projects" class="hud-link"><i class="fa-solid fa-dungeon"></i> QUESTS</a>
+            <a href="#services" class="hud-link"><i class="fa-solid fa-bolt"></i> UTILITIES</a>
+            <a href="#contact" class="hud-link"><i class="fa-solid fa-envelope"></i> LINK_UP</a>
+        </nav>
+        <div class="hud-controls">
+            <button id="audio-toggle" class="hud-btn" title="Toggle System Audio">
+                <i class="fa-solid fa-volume-xmark"></i> AUD_OFF
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN APPARATUS CONTAINER -->
+    <main class="viewport-wrapper">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="view-section hero-viewport">
+            <div class="hero-content-frame">
+                <div class="system-node-tag">SYSTEM USER: WISDOM</div>
+                <h1 class="hero-main-title">WISCODE <span class="text-neon-blue">PORTFOLIO</span></h1>
+                <h2 class="hero-subtitle">
+                    [ <span id="typing-engine" class="text-neon-green"></span><span class="typing-cursor">_</span> ]
+                </h2>
+                <p class="hero-descriptive-text">
+                    I forge full-stack architectural frameworks, native asynchronous backend systems, automated Discord
+                    neural clusters, and custom Python processing tools.
+                </p>
+                <div class="hero-action-cluster">
+                    <a href="#projects" class="btn-pixel binary-neon-green">
+                        <span class="btn-inner">INITIALIZE QUESTS</span>
+                    </a>
+                    <a href="#contact" class="btn-pixel binary-neon-blue">
+                        <span class="btn-inner">ESTABLISH LINK</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- STATS CORNER WIDGET -->
+            <div class="stats-counter-widget">
+                <div class="stat-node">
+                    <span class="stat-count" data-target="16">0</span>
+                    <span class="stat-label">LEVEL (AGE)</span>
+                </div>
+                <div class="stat-node">
+                    <span class="stat-count" data-target="42">0</span>
+                    <span class="stat-label">COMPLETED QUESTS</span>
+                </div>
+                <div class="stat-node">
+                    <span class="stat-count" data-target="145000">0</span>
+                    <span class="stat-label">LINES_OF_CODE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="view-section about-viewport">
+            <h2 class="section-heading-pixel"><span class="heading-tag">#01</span> PROFILE_SUMMARY</h2>
+            <div class="about-grid-layout">
+                <div class="terminal-container">
+                    <div class="terminal-header-bar">
+                        <span class="terminal-circle red"></span>
+                        <span class="terminal-circle yellow"></span>
+                        <span class="terminal-circle green"></span>
+                        <span class="terminal-title-text">wisdom@root:~</span>
+                    </div>
+                    <div class="terminal-body-field">
+                        <p class="term-output-text"><span class="term-prompt">wisdom@root:~$</span> cat bio.md</p>
+                        <p class="term-response-payload">
+                            I’m Wisdom, a 16-year-old developer who enjoys building websites, backend systems, Discord
+                            bots, and Python tools. I love coding, creating cool projects, and learning new tech.
+                        </p>
+                        <p class="term-output-text"><span class="term-prompt">wisdom@root:~$</span> fingerprint --status
+                        </p>
+                        <p class="term-response-payload text-neon-purple">> ALIVE | FOCUS: FULL-STACK DEVELOPMENT &
+                            AUTOMATION SYSTEMS</p>
+                        <p class="term-output-text"><span class="term-prompt">wisdom@root:~$</span> <span
+                                class="typing-cursor">_</span></p>
+                    </div>
+                </div>
+                <div class="identity-card-pixel">
+                    <div class="card-glitch-avatar-placeholder">
+                        <img src="templates/image/yt.jpg" alt="YouTube Channel Icon"
+                            class="fa-solid fa-user-secret asset-avatar-icon"
+                            style="width: 100px; height: 100px; border-radius: 50%;">
+                        <div class="avatar-scanline"></div>
+                    </div>
+                    <div class="identity-metadata">
+                        <div class="meta-row"><span class="meta-label">ALIAS:</span> <span class="meta-val">Wisdom /
+                                WisCode</span></div>
+                        <div class="meta-row"><span class="meta-label">CLASS:</span> <span class="meta-val">Full-Stack
+                                Rogue Mage</span></div>
+                        <div class="meta-row"><span class="meta-label">GUILD:</span> <span class="meta-val">Python / JS
+                                Pioneers</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="view-section skills-viewport">
+            <h2 class="section-heading-pixel"><span class="heading-tag">#02</span> TECH_SKILLS_TREE</h2>
+            <div class="skills-matrix-grid">
+
+                <!-- HTML Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-brands fa-html5 text-neon-orange"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">95%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-orange" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-brands fa-css3-alt text-neon-blue"></i>
+                        <h3>CSS3 / NEON GRID</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">90%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-blue" data-width="90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-brands fa-js text-neon-yellow"></i>
+                        <h3>JAVASCRIPT ES6</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">88%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-yellow" data-width="88%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-brands fa-python text-neon-blue"></i>
+                        <h3>PYTHON CORE</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">95%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-blue" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Django Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-cubes text-neon-green"></i>
+                        <h3>DJANGO FRAMEWORK</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">85%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-green" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discord Bot Development Card -->
+                <div class="skill-node-card">
+                    <div class="skill-brands fa-discord text-neon-purple">
+                        <i class="fa-brands fa-discord"></i>
+                        <h3>DISCORD API DEVS</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">95%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-purple" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-server text-neon-cyan"></i>
+                        <h3>BACKEND SYSTEMS</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">88%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-cyan" data-width="88%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Development Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-window-restore text-neon-pink"></i>
+                        <h3>FRONTEND INTERFACES</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">83%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-pink" data-width="83%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!---Password to formspree: c.afEqEf4!*EfVS-->
+                <!-- Godot Script Card -->
+                <div class="skill-node-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-gamepad text-neon-blue"></i>
+                        <h3>GODOT SCRIPT (GD)</h3>
+                    </div>
+                    <div class="skill-meter-wrapper">
+                        <div class="skill-meter-metrics"><span class="meter-label">PROFICIENCY</span><span
+                                class="meter-percentage">75%</span></div>
+                        <div class="skill-meter-track">
+                            <div class="skill-meter-fill progress-blue" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="view-section projects-viewport">
+            <h2 class="section-heading-pixel"><span class="heading-tag">#03</span> ACTIVE_QUESTS</h2>
+            <div class="projects-display-matrix">
+
+                <!-- Project 1 -->
+                <div class="project-matrix-card">
+                    <div class="project-media-wrapper">
+                        <div class="project-media-fallback p-bg-1"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span class="project-card-status status-online">RUNNING</span>
+                    </div>
+                    <div class="project-card-payload">
+                        <h3 class="project-card-title">Discord Moderation Bot</h3>
+                        <p class="project-card-description">Asynchronous multi-sharded moderation automation cluster
+                            engineered using Discord.py. Handles deep metric monitoring and dynamic permission
+                            adjustments.</p>
+                        <div class="project-tech-badge-row">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Discord.py</span>
+                            <span class="tech-badge">Asyncio</span>
+                        </div>
+                        <div class="project-hyperlink-dock">
+                            <a href="#" class="project-dock-link"><i class="fa-brands fa-github"></i> REPO</a>
+                            <a href="#" class="project-dock-link"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-matrix-card">
+                    <div class="project-media-wrapper">
+                        <div class="project-media-fallback p-bg-2"><i class="fa-solid fa-brain"></i></div>
+                        <span class="project-card-status status-online">STABLE</span>
+                    </div>
+                    <div class="project-card-payload">
+                        <h3 class="project-card-title">AI Discord Assistant</h3>
+                        <p class="project-card-description">Intelligent helper application mapping Large Language Model
+                            endpoints directly to Discord channels with persistent chat logging memory architectures.
+                        </p>
+                        <div class="project-tech-badge-row">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">OpenAI API</span>
+                            <span class="tech-badge">Redis</span>
+                        </div>
+                        <div class="project-hyperlink-dock">
+                            <a href="#" class="project-dock-link"><i class="fa-brands fa-github"></i> REPO</a>
+                            <a href="#" class="project-dock-link"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-matrix-card">
+                    <div class="project-media-wrapper">
+                        <div class="project-media-fallback p-bg-3"><i class="fa-solid fa-gamepad"></i></div>
+                        <span class="project-card-status status-dev">COMPILING</span>
+                    </div>
+                    <div class="project-card-payload">
+                        <h3 class="project-card-title">Gaming Website UI</h3>
+                        <p class="project-card-description">High-performance cyberpunk user interface layout
+                            incorporating retro components, canvas grid acceleration, and modern responsive viewports.
+                        </p>
+                        <div class="project-tech-badge-row">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS Grid</span>
+                            <span class="tech-badge">Vanilla JS</span>
+                        </div>
+                        <div class="project-hyperlink-dock">
+                            <a href="#" class="project-dock-link"><i class="fa-brands fa-github"></i> REPO</a>
+                            <a href="#" class="project-dock-link"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                DEMO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-matrix-card">
+                    <div class="project-media-wrapper">
+                        <div class="project-media-fallback p-bg-4"><i class="fa-solid fa-gears"></i></div>
+                        <span class="project-card-status status-online">ACTIVE</span>
+                    </div>
+                    <div class="project-card-payload">
+                        <h3 class="project-card-title">Python Automation Tool</h3>
+                        <p class="project-card-description">Command-line multi-threaded asset extraction utility and
+                            structural web scraper. Speeds up data parsing pipelines across vast sets of JSON data.</p>
+                        <div class="project-tech-badge-row">
+                            <span class="tech-badge">Python Core</span>
+                            <span class="tech-badge">BeautifulSoup</span>
+                            <span class="tech-badge">Threading</span>
+                        </div>
+                        <div class="project-hyperlink-dock">
+                            <a href="#" class="project-dock-link"><i class="fa-brands fa-github"></i> REPO</a>
+                            <a href="#" class="project-dock-link"><i class="fa-solid fa-download"></i> EXE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-matrix-card">
+                    <div class="project-media-wrapper">
+                        <div class="project-media-fallback p-bg-5"><i class="fa-solid fa-chart-line"></i></div>
+                        <span class="project-card-status status-dev">ALPHA_V2</span>
+                    </div>
+                    <div class="project-card-payload">
+                        <h3 class="project-card-title">Portfolio Dashboard</h3>
+                        <p class="project-card-description">Django-powered analytical framework displaying background
+                            process metrics, user telemetry counters, and live site telemetry visualization widgets.</p>
+                        <div class="project-tech-badge-row">
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">SQLite3</span>
+                            <span class="tech-badge">ChartJS</span>
+                        </div>
+                        <div class="project-hyperlink-dock">
+                            <a href="#" class="project-dock-link"><i class="fa-brands fa-github"></i> REPO</a>
+                            <a href="#" class="project-dock-link"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                PREVIEW</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="view-section services-viewport">
+            <h2 class="section-heading-pixel"><span class="heading-tag">#04</span> SYSTEM_UTILITIES</h2>
+            <div class="services-matrix-grid">
+
+                <!-- Service 1 -->
+                <div class="service-node-panel">
+                    <div class="service-icon-accent"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="service-panel-title">Website Development</h3>
+                    <p class="service-panel-description">Engineering responsive web structures backed by clean design
+                        patterns, pixel-perfect layout arrays, and rapid asset deployment pipelines.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-node-panel">
+                    <div class="service-icon-accent text-neon-purple"><i class="fa-brands fa-discord"></i></div>
+                    <h3 class="service-panel-title">Discord Bot Creation</h3>
+                    <p class="service-panel-description">Designing custom sharded bot modules with robust webhook
+                        integrations, secure state databases, and multi-threaded event routing systems.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-node-panel">
+                    <div class="service-icon-accent text-neon-blue"><i class="fa-solid fa-server"></i></div>
+                    <h3 class="service-panel-title">Backend Systems</h3>
+                    <p class="service-panel-description">Writing scalable database frameworks, secure data validation
+                        logic, and RESTful API structures primarily managed via Django architectures.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-node-panel">
+                    <div class="service-icon-accent text-neon-yellow"><i class="fa-brands fa-python"></i></div>
+                    <h3 class="service-panel-title">Python Tools</h3>
+                    <p class="service-panel-description">Writing multi-threaded OS scripts, background file monitoring
+                        systems, data normalization micro-pipelines, and routine automated cron engines.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-node-panel">
+                    <div class="service-icon-accent text-neon-pink"><i class="fa-solid fa-bezier-curve"></i></div>
+                    <h3 class="service-panel-title">UI Design</h3>
+                    <p class="service-panel-description">Building user experiences that bridge cybernetic retro-terminal
+                        visuals with modern accessibility rules across standard device resolutions.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="view-section contact-viewport">
+            <h2 class="section-heading-pixel"><span class="heading-tag">#05</span> UPLINK_GATEWAY</h2>
+            <div class="contact-terminal-grid">
+
+                <!-- Link form panel (Prepped for Django forms) -->
+                <div class="contact-form-hull">
+                    <form action="https://formspree.io/f/xkoerarp" method="POST" class="pixel-form-element">
+
+                        <div class="form-input-block">
+                            <label class="form-input-label">USER_NAME:</label>
+                            <input type="text" name="Username" class="form-text-field" required
+                                placeholder="Ex: Operator_Zero">
+                        </div>
+
+                        <div class="form-input-block">
+                            <label class="form-input-label">SECURE_EMAIL:</label>
+                            <input type="email" name="Email" class="form-text-field" required
+                                placeholder="Ex: zero@matrix.net">
+                        </div>
+
+                        <div class="form-input-block">
+                            <label class="form-input-label">TRANSMISSION_PAYLOAD:</label>
+                            <textarea name="Message" class="form-textarea-field" required
+                                placeholder="Enter transmission message code..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-pixel binary-neon-green form-submit-override">
+                            <span class="btn-inner">DISPATCH TRANSMISSION</span>
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- Live Info & Social Terminal Matrix -->
+                <div class="social-comms-deck">
+                    <div class="comms-panel-header">COMMS_DECK ROUTING</div>
+                    <p class="comms-meta-intro">Establish connection across secure alternative external network arrays:
+                    </p>
+
+                    <div class="social-button-row">
+                        <a href="https://github.com/Wisdom-oselene" target="_blank"
+                            class="social-neon-anchor git-neon-glow" title="GitHub Profile Gateway">
+                            <i class="fa-brands fa-github"></i> <span class="anchor-label">GITHUB</span>
+                        </a>
+                        <a href="https://www.youtube.com/@Wisdom0-Ai-Code" target="_blank"
+                            class="social-neon-anchor youtube-neon-glow" title="YouTube Media Stream">
+                            <i class="fa-brands fa-youtube"></i> <span class="anchor-label">YOUTUBE</span>
+                        </a>
+                        <a href="https://discord.com" target="_blank" class="social-neon-anchor discord-neon-glow"
+                            title="Discord Secure Guild Server">
+                            <i class="fa-brands fa-discord"></i> <span class="anchor-label">DISCORD</span>
+                        </a>
+                    </div>
+
+                    <div class="terminal-diagnostic-box">
+                        <div class="diagnostic-row"><span class="diag-label">PING:</span> <span
+                                class="diag-val text-neon-green">14ms (STABLE)</span></div>
+                        <div class="diagnostic-row"><span class="diag-label">PORT:</span> <span
+                                class="diag-val text-neon-blue">8000 // DJANGO_READY</span></div>
+                        <div class="diagnostic-row"><span class="diag-label">LOC:</span> <span
+                                class="diag-val text-neon-purple">CYBERSPACE_GRID_NODE_Z</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER INTERFACE SECTION -->
+    <footer class="hud-footer">
+        <p class="footer-copyright">&copy; 2026 <span class="text-neon-blue">Wisdom Portfolio</span> // ALL CORE MEMORY
+            RESERVED.</p>
+        <p class="footer-build-signature">ENGINE_BUILD: <span class="text-neon-green">WISCODE.exe_V1_STABLE</span></p>
+    </footer>
+
+    <!-- JavaScript Link (Django Static Location Point) -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
